@@ -1,0 +1,25 @@
+{
+	"name": "flashcard-ielts",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"lint": "biome check --write",
+		"start:dev": "bun --hot run src/backend.ts",
+		"build": "bun build --target=bun --production --bytecode --minify --outdir=dist ./src/backend.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.0",
+		"@types/bun": "latest",
+		"@types/react-dom": "^19.1.7",
+		"bun-plugin-tailwind": "^0.0.15"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
+		"tailwindcss": "^4.1.12"
+	}
+}
