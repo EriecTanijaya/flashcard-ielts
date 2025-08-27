@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const rootElem = document.getElementById("root");
 
 	if (!rootElem) {
-		throw new Error("No root element");
+		throw new Error("Root element not found");
 	}
 
 	const root = createRoot(rootElem);

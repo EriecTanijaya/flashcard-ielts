@@ -5,8 +5,8 @@
 	"private": true,
 	"scripts": {
 		"lint": "biome check --write",
-		"start:dev": "bun --hot run src/backend.ts",
-		"build": "bun build --target=bun --production --bytecode --minify --outdir=dist ./src/backend.ts"
+		"start:dev": "bun --hot run packages/index.ts",
+		"build": "bun build --compile --minify --sourcemap ./packages/index.ts --outfile=flashcard-ielts"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.0",

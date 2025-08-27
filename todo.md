@@ -1,0 +1,1 @@
+- current bun build single executable have bug, where tailwind plugin wont work
