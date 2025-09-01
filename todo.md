@@ -1,1 +1,2 @@
 - current bun build single executable have bug, where tailwind plugin wont work
+- use daisyui as the ui component library

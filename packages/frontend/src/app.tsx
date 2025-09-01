@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function App() {
 	const [answer, setAnswer] = useState("");
+	const [questions, setQuestions] = useState([]);
+	const [score, setScore] = useState(0);
 
 	function checkAnswer() {
 		/**
@@ -15,6 +17,16 @@ export function App() {
 		if (!answer) {
 		}
 	}
+
+	useEffect(() => {
+		fetch("/api/questions")
+			.then((res) => res.json())
+			.then((data) => {
+				setQuestions(data.questionAndAnswers);
+			});
+	}, []);
+
+	console.log(questions);
 
 	return (
 		<div className="flex flex-col min-h-screen">
