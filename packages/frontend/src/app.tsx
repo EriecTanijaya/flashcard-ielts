@@ -1,4 +1,21 @@
+import { useState } from "react";
+
 export function App() {
+	const [answer, setAnswer] = useState("");
+
+	function checkAnswer() {
+		/**
+		 * todo:
+		 *
+		 * - add validation to only input the string
+		 * - make all the string lowercased
+		 * - make the button disabled first if the answer is still empty
+		 */
+
+		if (!answer) {
+		}
+	}
+
 	return (
 		<div className="flex flex-col min-h-screen">
 			<header className="bg-gray-400 p-4">Header</header>
@@ -26,10 +43,12 @@ export function App() {
 				<input
 					className="placeholder:text-gray-700 border-solid border rounded-md p-3 w-full text-center focus:outline-hidden focus:border-2"
 					placeholder="Type your answer here.."
+					onChange={(e) => setAnswer(e.target.value)}
 				/>
 				<button
 					type="button"
 					className="rounded-md bg-gray-400 px-5 py-2 focus:outline-2 focus:outline-offset-2 font-semibold text-sm w-full"
+					onClick={() => checkAnswer()}
 				>
 					Check Answer
 				</button>
