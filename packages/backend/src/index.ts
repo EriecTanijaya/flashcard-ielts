@@ -1,11 +1,11 @@
 import { type Server, serve } from "bun";
 import os from "os";
-import dashboard from "../../frontend/public/dashboard.html";
+import flashcardPage from "../../frontend/src/flashcard.html";
 
 export async function bootstrapBackend() {
 	const server = serve({
 		routes: {
-			"/": dashboard,
+			"/": flashcardPage,
 			"/api/questions": {
 				async GET() {
 					return Response.json({

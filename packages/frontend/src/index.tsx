@@ -2,14 +2,19 @@ import { createRoot } from "react-dom/client";
 import { App } from "./app";
 import "./styles.css";
 
-document.addEventListener("DOMContentLoaded", () => {
-	const rootElem = document.getElementById("root");
+/**
+ * To check this, you can check document.readyState when your content script runs. If the state is interactive or complete, then the DOMContentLoaded event has already fired and you should just run the code directly.
+ *
+ * for mobile ios
+ *
+ */
 
-	if (!rootElem) {
-		throw new Error("Root element not found");
-	}
+// const rootElem = document.getElementById("root");
 
-	const root = createRoot(rootElem);
+// if (!rootElem) {
+// 	throw new Error("Root element not found");
+// }
 
-	root.render(<App />);
-});
+// const root = createRoot(rootElem);
+
+// root.render(<App />);
